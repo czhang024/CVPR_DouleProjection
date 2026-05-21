@@ -1,6 +1,25 @@
-# Flux — FLUX.1-schnell Experiments
+# ⚡ Flux — FLUX.1-schnell Experiments
 
-This sub-module contains the FLUX.1-schnell implementation of the **DP** method described in the CVPR 2026 paper. See the [main README](../README.md) for installation instructions and method details.
+This sub-module contains the **FLUX.1-schnell** implementation of the DP and UCE concept erasure methods from the CVPR 2026 paper. See the [main README](../README.md) for installation instructions and method details.
+
+The folder is organised as follows:
+
+```
+Flux/
+├── Double_proxy.py                  # DP method implementation (FLUX variant)
+├── UCE_original.py                  # UCE baseline implementation (FLUX variant)
+├── generate_original_flux.py        # Generate baseline images from original FLUX
+├── generate_erased_flux.py          # Generate images from an erased model
+├── compare_accuracy.py              # Evaluate erasure via classifier accuracy
+├── scripts/                         # 🔧 Shell scripts — one per concept × method
+│   ├── Double_CassettePlayer_flux.sh#    Full pipeline: train → generate → evaluate
+│   ├── UCE_CassettePlayer_flux.sh
+│   └── ...                          #    (scripts for all 10 ImageNette concepts)
+└── logs/                            # 📊 Pre-run logs with SUMMARY STATISTICS
+    ├── Double_CassettePlayer.log
+    ├── UCE_CassettePlayer.log
+    └── ...
+```
 
 ---
 
@@ -18,7 +37,13 @@ Key FLUX-specific implementation notes:
 ## Usage
 
 ### Step 0 — Generate Baseline Images (required once)
+1. Flux is a restricted model, and you'll need to request access on huggingface first.
 
+2. After this, log in the huggingface with 
+```python
+huggingface-cli login
+```
+3. It will take 10-30 minutes to download the model when running the following code:
 ```bash
 cd Flux
 nohup sh generate_original_flux.sh > original.log 2>&1 &

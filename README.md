@@ -9,14 +9,28 @@
 
 ---
 
+This repository contains the official implementation of **DP (Double Projections)**, a training-free, closed-form method for selectively erasing concepts from pre-trained text-to-image diffusion models. 
+
+We evaluate DP on the **ImageNette** benchmark (10 object classes) across two diffusion backbones:
+- 🖼️ **Stable Diffusion 1.4** — classical U-Net backbone, cross-attention weight edits
+- ⚡ **FLUX.1-schnell** — modern flow-matching transformer, T5 + CLIP dual-encoder edits
+
+For each backbone, runnable shell scripts, training logs, and evaluation results are provided for all 10 concepts under our DP method.
+
+---
+
 ## 📁 Repository Structure
 
 ```
 CVPR2026/
-├── requirements.txt   # Shared dependencies
-├── SD/                # Stable Diffusion 1.4 experiments
-├── Flux/              # FLUX.1-schnell experiments
-└── README.md          # This file
+├── requirements.txt       # Shared Python dependencies
+├── SD/                    # Stable Diffusion 1.4 experiments
+│   ├── scripts_SD14/      # Shell scripts for all 10 concepts × 2 methods
+│   └── training-logs/     # Pre-run logs with summary statistics
+├── Flux/                  # FLUX.1-schnell experiments
+│   ├── scripts/           # Shell scripts for all 10 concepts × 2 methods
+│   └── logs/              # Pre-run logs with summary statistics
+└── README.md              # This file
 ```
 
 ---

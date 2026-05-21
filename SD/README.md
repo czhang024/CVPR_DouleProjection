@@ -1,6 +1,28 @@
-# SD — Stable Diffusion 1.4 Experiments
+# 🖼️ SD — Stable Diffusion 1.4 Experiments
 
-This sub-module contains the Stable Diffusion 1.4 implementation of the **DP** method described in the CVPR 2026 paper. See the [main README](../README.md) for installation instructions (`requirements.txt` is at the repo root) and method details.
+This sub-module contains the **Stable Diffusion 1.4** implementation of the DP and UCE concept erasure methods from the CVPR 2026 paper. See the [main README](../README.md) for installation instructions (`requirements.txt` is at the repo root) and method details.
+
+The folder is organised as follows:
+
+```
+SD/
+├── Double_proxy.py                  # DP method implementation
+├── UCE_original.py                  # UCE baseline implementation
+├── generate_original_sd.py/.sh      # Generate baseline images from original SD 1.4
+├── generate_erased_small_imagenet.py# Generate images from an erased model
+├── compare_accuracy.py              # Evaluate erasure via classifier accuracy
+├── data/
+│   ├── small_imagenet_prompts.csv   # 100 prompts across 10 ImageNette classes
+│   └── big_artist_prompts.csv       # Extended artist concept prompts
+├── scripts_SD14/                    # 🔧 Shell scripts — one per concept × method
+│   ├── Double_CassettePlayer.sh     #    Full pipeline: train → generate → evaluate
+│   ├── UCE_CassettePlayer.sh
+│   └── ...                          #    (scripts for all 10 ImageNette concepts)
+└── training-logs/                   # 📊 Pre-run logs with SUMMARY STATISTICS
+    ├── CassettePlayer_DP.log
+    ├── CassettePlayer_UCE.log
+    └── ...
+```
 
 ---
 
