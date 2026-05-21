@@ -1,0 +1,50 @@
+# ── Model weights ────────────────────────────────────────────────────────────
+SD/models/
+Flux/models/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+
+# ── Generated images ─────────────────────────────────────────────────────────
+SD/generated_*/
+Flux/generated_*/
+Flux/scripts_copy
+
+# ── Experiment logs (runtime) ────────────────────────────────────────────────
+Flux/logs/
+SD/logs/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Environments ─────────────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+
+# ── HuggingFace cache (if stored locally in repo) ────────────────────────────
+.cache/
+hub/
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ── nohup output ─────────────────────────────────────────────────────────────
+nohup.out
