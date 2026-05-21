@@ -39,10 +39,11 @@ Key FLUX-specific implementation notes:
 ### Step 0 — Generate Baseline Images (required once)
 1. Flux is a restricted model, and you'll need to request access on huggingface first.
 
-2. After this, log in the huggingface with 
+2. After gaining access, log in the huggingface with 
 ```python
 huggingface-cli login
 ```
+
 3. It will take 10-30 minutes to download the model when running the following code:
 ```bash
 cd Flux
@@ -52,10 +53,10 @@ nohup sh generate_original_flux.sh > original.log 2>&1 &
 ### Step 1–3 — Run Full Pipeline per Concept
 
 ```bash
-# DP (our method) — runs on GPU:1
+# DP (our method) 
 nohup sh scripts/Double_CassettePlayer_flux.sh > Double_CassettePlayer.log 2>&1 &
 
-# UCE (baseline) — runs on GPU:3
+# UCE (baseline) (UCE_original.py is a copy and paste from the UCE official repo)
 nohup sh scripts/UCE_CassettePlayer_flux.sh > UCE_CassettePlayer.log 2>&1 &
 ```
 

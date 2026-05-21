@@ -53,7 +53,7 @@ pip install -r requirements.txt
 ---
 
 ## 📄 Citation
-
+Please cite the following work:
 ```bibtex
 @article{zhang2026closed,
   title={Closed-Form Concept Erasure via Double Projections},
@@ -62,3 +62,15 @@ pip install -r requirements.txt
   year={2026}
 }
 ```
+
+---
+
+## 📝 Acknowledgements
+
+This repository builds upon the implementation of the **[UCE (Unified Concept Erasure)](https://github.com/rohitgandikota/unified-concept-editing)** method. We thank the authors of the UCE paper for making their code publicly available.
+
+---
+
+## 🛠️ License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

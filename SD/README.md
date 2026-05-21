@@ -62,7 +62,7 @@ Each concept has a dedicated script that runs the full pipeline (train → gener
 # Using our proposed method
 nohup sh scripts_SD14/Double_CassettePlayer.sh > CassettePlayer_DP.log 2>&1 &
 
-# Using UCE baseline
+# Using UCE baseline (UCE_original.py is a copy and paste from the UCE official repo)
 nohup sh scripts_SD14/UCE_CassettePlayer.sh > CassettePlayer_UCE.log 2>&1 &
 ```
 
@@ -71,7 +71,7 @@ nohup sh scripts_SD14/UCE_CassettePlayer.sh > CassettePlayer_UCE.log 2>&1 &
 # Using our proposed method
 nohup sh scripts_SD14/Double_ChainSaw.sh > ChainSaw_DP.log 2>&1 &
 
-# Using UCE baseline
+# Using UCE baseline 
 nohup sh scripts_SD14/UCE_ChainSaw.sh > ChainSaw_UCE.log 2>&1 &
 ```
 
