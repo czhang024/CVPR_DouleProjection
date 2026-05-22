@@ -53,7 +53,7 @@ pip install -r requirements.txt
 ---
 
 ## 📄 Citation
-Please cite the following work:
+If you find our work useful, please cite the following work:
 ```bibtex
 @article{zhang2026closed,
   title={Closed-Form Concept Erasure via Double Projections},
